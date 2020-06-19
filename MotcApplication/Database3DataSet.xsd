@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Database3DataSet" targetNamespace="http://tempuri.org/Database3DataSet.xsd" xmlns:mstns="http://tempuri.org/Database3DataSet.xsd" xmlns="http://tempuri.org/Database3DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Database3ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database3ConnectionString (MySettings)" PropertyReference="ApplicationSettings.MotcApplication.My.MySettings.GlobalReference.Default.Database3ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="recipient_information_tblTableAdapter" GeneratorDataComponentClassName="recipient_information_tblTableAdapter" Name="recipient_information_tbl" UserDataComponentName="recipient_information_tblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database3ConnectionString (MySettings)" DbObjectName="recipient_information_tbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Patient MRN], [Patient Name], Gender, [Date of Birth], BMI, MELD, [Blood Group], City, [Original Disease], [Date of Listing] FROM recipient_information_tbl</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Patient MRN" DataSetColumn="Patient MRN" />
+              <Mapping SourceColumn="Patient Name" DataSetColumn="Patient Name" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="Date of Birth" DataSetColumn="Date of Birth" />
+              <Mapping SourceColumn="BMI" DataSetColumn="BMI" />
+              <Mapping SourceColumn="MELD" DataSetColumn="MELD" />
+              <Mapping SourceColumn="Blood Group" DataSetColumn="Blood Group" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="Original Disease" DataSetColumn="Original Disease" />
+              <Mapping SourceColumn="Date of Listing" DataSetColumn="Date of Listing" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Database3DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database3DataSet" msprop:Generator_UserDSName="Database3DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="recipient_information_tbl" msprop:Generator_TableClassName="recipient_information_tblDataTable" msprop:Generator_TableVarName="tablerecipient_information_tbl" msprop:Generator_TablePropName="recipient_information_tbl" msprop:Generator_RowDeletingName="recipient_information_tblRowDeleting" msprop:Generator_RowChangingName="recipient_information_tblRowChanging" msprop:Generator_RowEvHandlerName="recipient_information_tblRowChangeEventHandler" msprop:Generator_RowDeletedName="recipient_information_tblRowDeleted" msprop:Generator_UserTableName="recipient_information_tbl" msprop:Generator_RowChangedName="recipient_information_tblRowChanged" msprop:Generator_RowEvArgName="recipient_information_tblRowChangeEvent" msprop:Generator_RowClassName="recipient_information_tblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Patient_x0020_MRN" msprop:Generator_ColumnVarNameInTable="columnPatient_MRN" msprop:Generator_ColumnPropNameInRow="Patient_MRN" msprop:Generator_ColumnPropNameInTable="Patient_MRNColumn" msprop:Generator_UserColumnName="Patient MRN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Patient_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnPatient_Name" msprop:Generator_ColumnPropNameInRow="Patient_Name" msprop:Generator_ColumnPropNameInTable="Patient_NameColumn" msprop:Generator_UserColumnName="Patient Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_x0020_of_x0020_Birth" msprop:Generator_ColumnVarNameInTable="columnDate_of_Birth" msprop:Generator_ColumnPropNameInRow="Date_of_Birth" msprop:Generator_ColumnPropNameInTable="Date_of_BirthColumn" msprop:Generator_UserColumnName="Date of Birth" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BMI" msprop:Generator_ColumnVarNameInTable="columnBMI" msprop:Generator_ColumnPropNameInRow="BMI" msprop:Generator_ColumnPropNameInTable="BMIColumn" msprop:Generator_UserColumnName="BMI" type="xs:short" minOccurs="0" />
+              <xs:element name="MELD" msprop:Generator_ColumnVarNameInTable="columnMELD" msprop:Generator_ColumnPropNameInRow="MELD" msprop:Generator_ColumnPropNameInTable="MELDColumn" msprop:Generator_UserColumnName="MELD" type="xs:short" minOccurs="0" />
+              <xs:element name="Blood_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnBlood_Group" msprop:Generator_ColumnPropNameInRow="Blood_Group" msprop:Generator_ColumnPropNameInTable="Blood_GroupColumn" msprop:Generator_UserColumnName="Blood Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Original_x0020_Disease" msprop:Generator_ColumnVarNameInTable="columnOriginal_Disease" msprop:Generator_ColumnPropNameInRow="Original_Disease" msprop:Generator_ColumnPropNameInTable="Original_DiseaseColumn" msprop:Generator_UserColumnName="Original Disease" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_x0020_of_x0020_Listing" msprop:Generator_ColumnVarNameInTable="columnDate_of_Listing" msprop:Generator_ColumnPropNameInRow="Date_of_Listing" msprop:Generator_ColumnPropNameInTable="Date_of_ListingColumn" msprop:Generator_UserColumnName="Date of Listing" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
