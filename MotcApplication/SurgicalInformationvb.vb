@@ -4,11 +4,11 @@ Public Class SurgicalInformationvb
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
         Try
             Dim surgicalrSql As String = "INSERT INTO surgical_information_tbl 
-(MRNP,BloodTransfusion,TypeOfBlood,UnitOfBlood,BloodLoss,DateofTransplant,TypeOfLT,CellSaver,ICUStay,
-DateOfDischarge,GraftWeright,NumberOfDuct,GraftUsed,GRWR,PatientsStatusafterSurgery,Biliary,
+(MRNP,TypeOfBlood,UnitOfBlood,BloodLoss,DateOfAdmission,DateofTransplant,TypeOfLT,CellSaver,ICUStay,
+DateOfDischarge,GraftVolume,GraftWeright,NumberOfDuct,GraftUsed,GRWR,PatientsStatusafterSurgery,Biliary,
 Rejection,NoofEpisode,CombinedLiverandKindey,BiliaryAnastomosis,TypeOfLtAdultChild,TypeOfLtRelate,Vascular,Infection) values
-(@MRNP,@bloodTransfusion,@typeOfBlood,@unitOfBlood,@bloodLoos,@dot,@tol,@cellSaver,@icuStay,
-@dateOfDischarge,@graftWeright,@numberOfDuct,@graftUsed,@grwr,@psas,@biliary,@rejection,
+(@MRNP,@typeOfBlood,@unitOfBlood,@bloodLoos,@DateOfAdmission,@dot,@tol,@cellSaver,@icuStay,
+@dateOfDischarge,@GraftVolume,@graftWeright,@numberOfDuct,@graftUsed,@grwr,@psas,@biliary,@rejection,
 @noofEpisode,@clak,@biliaryAnastomosis,@typeOfLtAdultChild,@typeOfLtRelate,@vascular,@infection)"
             Dim asc As String = ""
             If (a2aRb.Checked) Then
@@ -34,19 +34,20 @@ Rejection,NoofEpisode,CombinedLiverandKindey,BiliaryAnastomosis,TypeOfLtAdultChi
             End If
             cmd = New OleDbCommand(surgicalrSql, conn)
             cmd.Parameters.Add(New OleDbParameter("@MRNP", OleDbType.VarChar)).Value = MRNP.Text
-            cmd.Parameters.Add(New OleDbParameter("@bloodTransfusion", OleDbType.Integer)).Value = typeOfBloodTB.Text
             cmd.Parameters.Add(New OleDbParameter("@typeOfBlood", OleDbType.VarChar)).Value = typeOfBloodTB.Text
-            cmd.Parameters.Add(New OleDbParameter("@unitOfBlood", OleDbType.Integer)).Value = unitOfBloodTB.Text
+            cmd.Parameters.Add(New OleDbParameter("@unitOfBlood", OleDbType.VarChar)).Value = unitOfBloodTB.Text
             cmd.Parameters.Add(New OleDbParameter("@bloodLoos", OleDbType.VarChar)).Value = bloodLossTB.Text
+            cmd.Parameters.Add(New OleDbParameter("@DateOfAdmission", OleDbType.Date)).Value = DateOfAdmissiondt.Value
             cmd.Parameters.Add(New OleDbParameter("@dot", OleDbType.Date)).Value = dateOfTransplantDt.Value
             cmd.Parameters.Add(New OleDbParameter("@tol", OleDbType.VarChar)).Value = typeOfLTTB.Text
             cmd.Parameters.Add(New OleDbParameter("@cellSaver", OleDbType.VarChar)).Value = cellSaverTB.Text
-            cmd.Parameters.Add(New OleDbParameter("@icuStay", OleDbType.Integer)).Value = iCUStayTB.Text
+            cmd.Parameters.Add(New OleDbParameter("@icuStay", OleDbType.VarChar)).Value = iCUStayTB.Text
             cmd.Parameters.Add(New OleDbParameter("@dateOfDischarge", OleDbType.Date)).Value = dateofDischargeDT.Value
+            cmd.Parameters.Add(New OleDbParameter("@GraftVolume", OleDbType.VarChar)).Value = GraftVolumeTB.Text
             cmd.Parameters.Add(New OleDbParameter("@graftWeright", OleDbType.VarChar)).Value = graftWerightTB.Text
-            cmd.Parameters.Add(New OleDbParameter("@numberOfDuct", OleDbType.Integer)).Value = numberOfDuctTB.Text
+            cmd.Parameters.Add(New OleDbParameter("@numberOfDuct", OleDbType.VarChar)).Value = numberOfDuctTB.Text
             cmd.Parameters.Add(New OleDbParameter("@graftUsed", OleDbType.VarChar)).Value = graftedUsedTB.Text
-            cmd.Parameters.Add(New OleDbParameter("@grwr", OleDbType.Integer)).Value = grwrTB.Text
+            cmd.Parameters.Add(New OleDbParameter("@grwr", OleDbType.VarChar)).Value = grwrTB.Text
             cmd.Parameters.Add(New OleDbParameter("@psas", OleDbType.VarChar)).Value = pSaSTB.Text
             cmd.Parameters.Add(New OleDbParameter("@biliary", OleDbType.VarChar)).Value = billiaryTB.Text
             cmd.Parameters.Add(New OleDbParameter("@rejection", OleDbType.VarChar)).Value = rejectionTB.Text
@@ -97,12 +98,21 @@ Rejection,NoofEpisode,CombinedLiverandKindey,BiliaryAnastomosis,TypeOfLtAdultChi
         TabControl1.SelectedTab = TabPage1
         backTab.Visible = False
         saveBtn.Visible = False
-
         nextTab.Visible = True
 
     End Sub
 
     Private Sub panel3_Paint(sender As Object, e As PaintEventArgs) Handles panel3.Paint
 
+    End Sub
+
+    Private Sub unitOfBloodTB_KeyPress(sender As Object, e As KeyPressEventArgs) Handles unitOfBloodTB.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57  '0--9'
+            Case 46   '(.)'
+            Case 8     'backspace'
+            Case Else
+                e.Handled = True
+        End Select
     End Sub
 End Class

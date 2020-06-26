@@ -74,9 +74,7 @@
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="WindowsBase" />
@@ -96,11 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.vb" />
-    <Compile Include="Database3DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database3DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DonorInformation.Designer.vb">
       <DependentUpon>DonorInformation.vb</DependentUpon>
     </Compile>
@@ -112,6 +105,18 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDonorWorkup.Designer.vb">
+      <DependentUpon>FormDonorWorkup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDonorWorkup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LabsResult.Designer.vb">
@@ -153,6 +158,18 @@
     <Compile Include="RecieptInformation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="showClinic.Designer.vb">
+      <DependentUpon>showClinic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="showClinic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showNote.Designer.vb">
+      <DependentUpon>showNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="showNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SurgicalInformationvb.Designer.vb">
       <DependentUpon>SurgicalInformationvb.vb</DependentUpon>
     </Compile>
@@ -165,6 +182,12 @@
     <Compile Include="WorkUp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ShowForm3.Designer.vb">
+      <DependentUpon>ShowForm3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShowForm3.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DonorInformation.resx">
@@ -172,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDonorWorkup.resx">
+      <DependentUpon>FormDonorWorkup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LabsResult.resx">
       <DependentUpon>LabsResult.vb</DependentUpon>
@@ -191,26 +220,24 @@
     <EmbeddedResource Include="RecieptInformation.resx">
       <DependentUpon>RecieptInformation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="showClinic.resx">
+      <DependentUpon>showClinic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showNote.resx">
+      <DependentUpon>showNote.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SurgicalInformationvb.resx">
       <DependentUpon>SurgicalInformationvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkUp.resx">
       <DependentUpon>WorkUp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ShowForm3.resx">
+      <DependentUpon>ShowForm3.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
-    <None Include="Database3DataSet.xsc">
-      <DependentUpon>Database3DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database3DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database3DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database3DataSet.xss">
-      <DependentUpon>Database3DataSet.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -235,7 +262,24 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\organ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -6,8 +6,7 @@ Public Class RecieptInformation
     Private Sub saveReciepientBtn_Click(sender As Object, e As EventArgs) Handles saveReciepientBtn.Click
 
 
-        Dim recieptSql As String = "INSERT INTO recipient_information_tbl(
-PatientIDNumber,MRNP,PatientName,Gender,DateOfBirth,Height,Weight,BMI,MELD,BloodGroup,ContactNumber,City,OriginalDisease,TypeofTransplant,TypeofOrgan
+        Dim recieptSql As String = "INSERT INTO recipient_information_tbl(MRNP,PatientIDNumber,PatientName,Gender,DateOfBirth,Height,Weight,BMI,MELD,BloodGroup,ContactNumber,City,OriginalDisease,TypeofTransplant,TypeofOrgan
 ,DateofListing,motcList) values (@pin,@pMrn,@pName,@gender,@dob,@height,@weight,@bmi,@meld,@bloodG,@cNumber,@city,@oDisease,@tot,@too,@doListing,@motcList)"
         Dim checkedGender As String = ""
 
@@ -18,9 +17,8 @@ PatientIDNumber,MRNP,PatientName,Gender,DateOfBirth,Height,Weight,BMI,MELD,Blood
         End If
         Try
             cmd = New OleDbCommand(recieptSql, conn)
-
+            cmd.Parameters.Add(New OleDbParameter("@pMrn", OleDbType.VarChar)).Value = MRNTb.Text
             cmd.Parameters.Add(New OleDbParameter("@pin", OleDbType.VarChar)).Value = IDTb.Text
-            cmd.Parameters.Add(New OleDbParameter("@pMrn", OleDbType.Integer)).Value = MRNTb.Text
             cmd.Parameters.Add(New OleDbParameter("@pName", OleDbType.VarChar)).Value = RecieptNameTB.Text
             cmd.Parameters.Add(New OleDbParameter("@gender", OleDbType.VarChar)).Value = checkedGender
             cmd.Parameters.Add(New OleDbParameter("@dob", OleDbType.VarChar)).Value = dobDT.Value
@@ -62,16 +60,6 @@ PatientIDNumber,MRNP,PatientName,Gender,DateOfBirth,Height,Weight,BMI,MELD,Blood
     End Sub
 
     Private Sub IDTb_KeyPress(sender As Object, e As KeyPressEventArgs) Handles IDTb.KeyPress
-        Select Case Asc(e.KeyChar)
-            Case 48 To 57  '0--9'
-            Case 46   '(.)'
-            Case 8     'backspace'
-            Case Else
-                e.Handled = True
-        End Select
-    End Sub
-
-    Private Sub MRNTb_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MRNTb.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 57  '0--9'
             Case 46   '(.)'

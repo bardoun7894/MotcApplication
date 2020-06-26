@@ -5,9 +5,9 @@ Public Class DonorInformation
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
         Try
             Dim donorSql As String = "INSERT INTO donor_information_tbl 
-            (FullName,MRNP,PatientIDNumber,TypeofID,MRND,ExMRN,DateOfBirth,Gender,Smoking,Height,Weight,BMI,Related
+            (FullName,MRNP,MRND,ExMRN,DateOfBirth,Gender,Smoking,Height,Weight,BMI,Related
            ,TypeofRelationship,BloodGroup,ContactNumber,City,TakingMedication,PreviousSurgery,MedicalCondition)values
-            (@fullName,@MRNP,@pin,@tod,@mrnd,@exmrn,@dob,@gender,@smoking,@height,@weight,@bmi,@Related,@torelation,@bloodG,
+            (@fullName,@MRNP,@mrnd,@exmrn,@dob,@gender,@smoking,@height,@weight,@bmi,@Related,@torelation,@bloodG,
                @cNumber,@city,@takeMedication,@pSurgery,@medicalCondition)"
             Dim checkedGender As String = ""
             If donormaleRb.Checked Then
@@ -18,8 +18,7 @@ Public Class DonorInformation
             cmd = New OleDbCommand(donorSql, conn)
             cmd.Parameters.Add(New OleDbParameter("@fullName", OleDbType.VarChar)).Value = donorNameTB.Text
             cmd.Parameters.Add(New OleDbParameter("@MRNP", OleDbType.VarChar)).Value = MRNPTB.Text
-            cmd.Parameters.Add(New OleDbParameter("@pin", OleDbType.BigInt)).Value = donorPidTB.Text
-            cmd.Parameters.Add(New OleDbParameter("@tod", OleDbType.VarChar)).Value = donorTypeIdTB.Text
+
             cmd.Parameters.Add(New OleDbParameter("@mrnd", OleDbType.Integer)).Value = donorMRNTb.Text
             cmd.Parameters.Add(New OleDbParameter("@exmrn", OleDbType.Integer)).Value = donorExMRN.Text
             cmd.Parameters.Add(New OleDbParameter("@dob", OleDbType.Date)).Value = donordobDT.Value
@@ -65,7 +64,7 @@ Public Class DonorInformation
         End Select
     End Sub
 
-    Private Sub donorPidTB_KeyPress(sender As Object, e As KeyPressEventArgs) Handles donorPidTB.KeyPress
+    Private Sub donorPidTB_KeyPress(sender As Object, e As KeyPressEventArgs)
         Select Case Asc(e.KeyChar)
             Case 48 To 57  '0--9'
             Case 46   '(.)'

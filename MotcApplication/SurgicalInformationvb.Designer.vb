@@ -51,13 +51,11 @@ Partial Class SurgicalInformationvb
         Me.cellSaverTB = New System.Windows.Forms.TextBox()
         Me.typeOfBloodTB = New System.Windows.Forms.TextBox()
         Me.MRNP = New System.Windows.Forms.TextBox()
-        Me.donorNameTB = New System.Windows.Forms.TextBox()
         Me.iCUStayTB = New System.Windows.Forms.TextBox()
         Me.typeOfLTTB = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.bloodTransfusionTb = New System.Windows.Forms.Label()
         Me.d = New System.Windows.Forms.Label()
         Me.biliaryAnastomosisTB = New System.Windows.Forms.TextBox()
         Me.rejectionTB = New System.Windows.Forms.TextBox()
@@ -87,6 +85,10 @@ Partial Class SurgicalInformationvb
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.a2cRB = New System.Windows.Forms.RadioButton()
         Me.a2aRb = New System.Windows.Forms.RadioButton()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.DateOfAdmissiondt = New System.Windows.Forms.DateTimePicker()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.GraftVolumeTB = New System.Windows.Forms.TextBox()
         Me.panel1.SuspendLayout()
         Me.panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -200,14 +202,17 @@ Partial Class SurgicalInformationvb
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.TabPage1.Controls.Add(Me.dateofDischargeDT)
+        Me.TabPage1.Controls.Add(Me.DateOfAdmissiondt)
         Me.TabPage1.Controls.Add(Me.dateOfTransplantDt)
         Me.TabPage1.Controls.Add(Me.ddd)
         Me.TabPage1.Controls.Add(Me.icuu)
         Me.TabPage1.Controls.Add(Me.Rejection)
         Me.TabPage1.Controls.Add(Me.numberOfDuctTB)
         Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.GraftVolumeTB)
         Me.TabPage1.Controls.Add(Me.graftWerightTB)
         Me.TabPage1.Controls.Add(Me.graftedUsedTB)
+        Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.NoEpisodeTB)
@@ -219,13 +224,12 @@ Partial Class SurgicalInformationvb
         Me.TabPage1.Controls.Add(Me.cellSaverTB)
         Me.TabPage1.Controls.Add(Me.typeOfBloodTB)
         Me.TabPage1.Controls.Add(Me.MRNP)
-        Me.TabPage1.Controls.Add(Me.donorNameTB)
         Me.TabPage1.Controls.Add(Me.iCUStayTB)
         Me.TabPage1.Controls.Add(Me.typeOfLTTB)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.bloodTransfusionTb)
+        Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.d)
         Me.TabPage1.Controls.Add(Me.biliaryAnastomosisTB)
         Me.TabPage1.Controls.Add(Me.rejectionTB)
@@ -249,14 +253,14 @@ Partial Class SurgicalInformationvb
         '
         'dateofDischargeDT
         '
-        Me.dateofDischargeDT.Location = New System.Drawing.Point(259, 492)
+        Me.dateofDischargeDT.Location = New System.Drawing.Point(260, 458)
         Me.dateofDischargeDT.Name = "dateofDischargeDT"
         Me.dateofDischargeDT.Size = New System.Drawing.Size(222, 25)
         Me.dateofDischargeDT.TabIndex = 43
         '
         'dateOfTransplantDt
         '
-        Me.dateOfTransplantDt.Location = New System.Drawing.Point(264, 271)
+        Me.dateOfTransplantDt.Location = New System.Drawing.Point(265, 242)
         Me.dateOfTransplantDt.Name = "dateOfTransplantDt"
         Me.dateOfTransplantDt.Size = New System.Drawing.Size(222, 25)
         Me.dateOfTransplantDt.TabIndex = 42
@@ -266,7 +270,7 @@ Partial Class SurgicalInformationvb
         Me.ddd.AutoSize = True
         Me.ddd.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ddd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ddd.Location = New System.Drawing.Point(60, 375)
+        Me.ddd.Location = New System.Drawing.Point(61, 341)
         Me.ddd.Name = "ddd"
         Me.ddd.Size = New System.Drawing.Size(89, 23)
         Me.ddd.TabIndex = 21
@@ -277,7 +281,7 @@ Partial Class SurgicalInformationvb
         Me.icuu.AutoSize = True
         Me.icuu.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.icuu.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.icuu.Location = New System.Drawing.Point(60, 433)
+        Me.icuu.Location = New System.Drawing.Point(61, 399)
         Me.icuu.Name = "icuu"
         Me.icuu.Size = New System.Drawing.Size(78, 23)
         Me.icuu.TabIndex = 20
@@ -296,7 +300,7 @@ Partial Class SurgicalInformationvb
         '
         'numberOfDuctTB
         '
-        Me.numberOfDuctTB.Location = New System.Drawing.Point(895, 7)
+        Me.numberOfDuctTB.Location = New System.Drawing.Point(262, 505)
         Me.numberOfDuctTB.Name = "numberOfDuctTB"
         Me.numberOfDuctTB.Size = New System.Drawing.Size(222, 25)
         Me.numberOfDuctTB.TabIndex = 40
@@ -306,7 +310,7 @@ Partial Class SurgicalInformationvb
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(647, 8)
+        Me.Label4.Location = New System.Drawing.Point(63, 506)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(141, 23)
         Me.Label4.TabIndex = 18
@@ -406,42 +410,35 @@ Partial Class SurgicalInformationvb
         '
         'cellSaverTB
         '
-        Me.cellSaverTB.Location = New System.Drawing.Point(261, 376)
+        Me.cellSaverTB.Location = New System.Drawing.Point(262, 342)
         Me.cellSaverTB.Name = "cellSaverTB"
         Me.cellSaverTB.Size = New System.Drawing.Size(222, 25)
         Me.cellSaverTB.TabIndex = 34
         '
         'typeOfBloodTB
         '
-        Me.typeOfBloodTB.Location = New System.Drawing.Point(261, 108)
+        Me.typeOfBloodTB.Location = New System.Drawing.Point(265, 56)
         Me.typeOfBloodTB.Name = "typeOfBloodTB"
         Me.typeOfBloodTB.Size = New System.Drawing.Size(222, 25)
         Me.typeOfBloodTB.TabIndex = 31
         '
         'MRNP
         '
-        Me.MRNP.Location = New System.Drawing.Point(262, 11)
+        Me.MRNP.Location = New System.Drawing.Point(266, 11)
         Me.MRNP.Name = "MRNP"
         Me.MRNP.Size = New System.Drawing.Size(222, 25)
         Me.MRNP.TabIndex = 33
         '
-        'donorNameTB
-        '
-        Me.donorNameTB.Location = New System.Drawing.Point(261, 60)
-        Me.donorNameTB.Name = "donorNameTB"
-        Me.donorNameTB.Size = New System.Drawing.Size(222, 25)
-        Me.donorNameTB.TabIndex = 33
-        '
         'iCUStayTB
         '
-        Me.iCUStayTB.Location = New System.Drawing.Point(261, 435)
+        Me.iCUStayTB.Location = New System.Drawing.Point(262, 401)
         Me.iCUStayTB.Name = "iCUStayTB"
         Me.iCUStayTB.Size = New System.Drawing.Size(222, 25)
         Me.iCUStayTB.TabIndex = 32
         '
         'typeOfLTTB
         '
-        Me.typeOfLTTB.Location = New System.Drawing.Point(264, 328)
+        Me.typeOfLTTB.Location = New System.Drawing.Point(265, 294)
         Me.typeOfLTTB.Name = "typeOfLTTB"
         Me.typeOfLTTB.Size = New System.Drawing.Size(222, 25)
         Me.typeOfLTTB.TabIndex = 41
@@ -451,7 +448,7 @@ Partial Class SurgicalInformationvb
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(61, 334)
+        Me.Label3.Location = New System.Drawing.Point(62, 300)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 23)
         Me.Label3.TabIndex = 7
@@ -462,7 +459,7 @@ Partial Class SurgicalInformationvb
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(61, 108)
+        Me.Label10.Location = New System.Drawing.Point(61, 56)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(130, 23)
         Me.Label10.TabIndex = 13
@@ -473,29 +470,18 @@ Partial Class SurgicalInformationvb
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label11.Location = New System.Drawing.Point(61, 9)
+        Me.Label11.Location = New System.Drawing.Point(68, 10)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(112, 23)
         Me.Label11.TabIndex = 24
         Me.Label11.Text = "MRN Patient"
-        '
-        'bloodTransfusionTb
-        '
-        Me.bloodTransfusionTb.AutoSize = True
-        Me.bloodTransfusionTb.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bloodTransfusionTb.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.bloodTransfusionTb.Location = New System.Drawing.Point(60, 58)
-        Me.bloodTransfusionTb.Name = "bloodTransfusionTb"
-        Me.bloodTransfusionTb.Size = New System.Drawing.Size(153, 23)
-        Me.bloodTransfusionTb.TabIndex = 24
-        Me.bloodTransfusionTb.Text = "Blood Transfusion"
         '
         'd
         '
         Me.d.AutoSize = True
         Me.d.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.d.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.d.Location = New System.Drawing.Point(61, 276)
+        Me.d.Location = New System.Drawing.Point(62, 247)
         Me.d.Name = "d"
         Me.d.Size = New System.Drawing.Size(159, 23)
         Me.d.TabIndex = 8
@@ -564,14 +550,14 @@ Partial Class SurgicalInformationvb
         '
         'unitOfBloodTB
         '
-        Me.unitOfBloodTB.Location = New System.Drawing.Point(264, 164)
+        Me.unitOfBloodTB.Location = New System.Drawing.Point(265, 101)
         Me.unitOfBloodTB.Name = "unitOfBloodTB"
         Me.unitOfBloodTB.Size = New System.Drawing.Size(222, 25)
         Me.unitOfBloodTB.TabIndex = 25
         '
         'bloodLossTB
         '
-        Me.bloodLossTB.Location = New System.Drawing.Point(262, 217)
+        Me.bloodLossTB.Location = New System.Drawing.Point(265, 148)
         Me.bloodLossTB.Name = "bloodLossTB"
         Me.bloodLossTB.Size = New System.Drawing.Size(222, 25)
         Me.bloodLossTB.TabIndex = 26
@@ -581,7 +567,7 @@ Partial Class SurgicalInformationvb
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(61, 168)
+        Me.Label9.Location = New System.Drawing.Point(62, 105)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(118, 23)
         Me.Label9.TabIndex = 22
@@ -592,7 +578,7 @@ Partial Class SurgicalInformationvb
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label14.Location = New System.Drawing.Point(59, 219)
+        Me.Label14.Location = New System.Drawing.Point(62, 150)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(95, 23)
         Me.Label14.TabIndex = 9
@@ -603,7 +589,7 @@ Partial Class SurgicalInformationvb
         Me.dta.AutoSize = True
         Me.dta.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dta.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.dta.Location = New System.Drawing.Point(60, 488)
+        Me.dta.Location = New System.Drawing.Point(61, 454)
         Me.dta.Name = "dta"
         Me.dta.Size = New System.Drawing.Size(154, 23)
         Me.dta.TabIndex = 6
@@ -784,6 +770,42 @@ Partial Class SurgicalInformationvb
         Me.a2aRb.Text = "Adult to Adult"
         Me.a2aRb.UseVisualStyleBackColor = True
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Location = New System.Drawing.Point(63, 201)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(158, 23)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Date of Admission"
+        '
+        'DateOfAdmissiondt
+        '
+        Me.DateOfAdmissiondt.Location = New System.Drawing.Point(266, 196)
+        Me.DateOfAdmissiondt.Name = "DateOfAdmissiondt"
+        Me.DateOfAdmissiondt.Size = New System.Drawing.Size(222, 25)
+        Me.DateOfAdmissiondt.TabIndex = 42
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label13.Location = New System.Drawing.Point(647, 13)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(117, 23)
+        Me.Label13.TabIndex = 23
+        Me.Label13.Text = "Graft Volume"
+        '
+        'GraftVolumeTB
+        '
+        Me.GraftVolumeTB.Location = New System.Drawing.Point(895, 11)
+        Me.GraftVolumeTB.Name = "GraftVolumeTB"
+        Me.GraftVolumeTB.Size = New System.Drawing.Size(222, 25)
+        Me.GraftVolumeTB.TabIndex = 39
+        '
         'SurgicalInformationvb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -841,12 +863,10 @@ Partial Class SurgicalInformationvb
     Friend WithEvents Label5 As Label
     Friend WithEvents cellSaverTB As TextBox
     Friend WithEvents typeOfBloodTB As TextBox
-    Friend WithEvents donorNameTB As TextBox
     Friend WithEvents iCUStayTB As TextBox
     Friend WithEvents typeOfLTTB As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents bloodTransfusionTb As Label
     Friend WithEvents d As Label
     Friend WithEvents biliaryAnastomosisTB As TextBox
     Friend WithEvents rejectionTB As TextBox
@@ -880,4 +900,8 @@ Partial Class SurgicalInformationvb
     Friend WithEvents nextTab As Button
     Friend WithEvents MRNP As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents DateOfAdmissiondt As DateTimePicker
+    Friend WithEvents GraftVolumeTB As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
 End Class

@@ -86,7 +86,14 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
+        With _ٍShowForm3
+            .Dock = DockStyle.Fill
+            .TopLevel = False
+            Container.Controls.Clear()
+            Container.Controls.Add(_ٍShowForm3)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
 
@@ -98,5 +105,10 @@
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
 
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.ShowInTaskbar = False
+        Me.ShowIcon = True
     End Sub
 End Class

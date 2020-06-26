@@ -8,13 +8,13 @@ Public Class LabsResult
 SickleCell,Na,K,BUN,Creatinine,Bili,AST,GGT,ALT
 ,ALP,Mg,Cholestrol,HIV,HAV_Antibody_IgM,HAV_Antibody_IgG,HBV_Core_Antibody,HBV_Core_Antibody_IgM,HBV_Surface_Antibody_Total,HBV_Surface_Antigen,HCV_Antibody_IgG,HSV,CMV_Antibody_IgG,CMV_Antibody_IgM,VZV_Antibody_IgG,Measles_Antibody_IgG
 ,Mumps_Antibody_IgG,Rubella_Antibody_IgG,Toxoplasma_Antibody_IgG,Toxoplasma_Antibody_IgM
-,AFP,CEA,CA199,CA125,SerumIG,ANA,ASMA,AMA,AntitLKM,ANCA,ThroatCulture,MRSA,Urine,BloodCulrure,AsciticFluid,Other)
+,AFP,CEA,CA199,CA125,SerumIG,ANA,ASMA,AMA,AntitLKM,ANCA,ThroatCulture,MRSA,Urine,BloodCulrure,AsciticFluid,Other,FKLEVEL)
 values
 (@MRNP,@DateOfBlood,@WBC,@Hb,@Platlet,@INR,@BLS,@SickleCell,@Na,@K,
 @BUN,@Creatinine,@Bili,@AST,@GGT,@ALT,@ALP,@Mg,@Cholestrol,@HIV,@HAV_Antibody_IgM,@HAV_Antibody_IgG,@HBV_Core_Antibody
 ,@HBV_Core_Antibody_IgM,@HBV_Surface_Antibody_Total,@HBV_Surface_Antigen,@HCV_Antibody_IgG,@HSV,@CMV_Antibody_IgG
 ,@CMV_Antibody_IgM,@VZV_Antibody_IgG,@Measles_Antibody_IgG,@Mumps_Antibody_IgG,@Rubella_Antibody_IgG,@Toxoplasma_Antibody_IgG,@Toxoplasma_Antibody_IgM
-,@AFP,@CEA,@CA199,@CA125,@SerumIG,@ANA,@ASMA,@AMA,@AntitLKM,@ANCA,@ThroatCulture,@MRSA,@Urine,@BloodCulrure,@AsciticFluid,@Other)"
+,@AFP,@CEA,@CA199,@CA125,@SerumIG,@ANA,@ASMA,@AMA,@AntitLKM,@ANCA,@ThroatCulture,@MRSA,@Urine,@BloodCulrure,@AsciticFluid,@Other,@FKLEVEL)"
 
         cmd = New OleDbCommand(labResult, conn)
         cmd.Parameters.Add(New OleDbParameter("@MRNP", OleDbType.VarChar)).Value = MRNTb.Text
@@ -69,6 +69,7 @@ values
         cmd.Parameters.Add(New OleDbParameter("@BloodCulrure", OleDbType.VarChar)).Value = BloodCulrureTB.Text
         cmd.Parameters.Add(New OleDbParameter("@AsciticFluid", OleDbType.VarChar)).Value = AsciticFluidTB.Text
         cmd.Parameters.Add(New OleDbParameter("@Other", OleDbType.VarChar)).Value = otherTB.Text
+        cmd.Parameters.Add(New OleDbParameter("@@FKLEVEL", OleDbType.VarChar)).Value = FKLEVELTB.Text
 
 
         conn.Open()
