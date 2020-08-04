@@ -22,6 +22,7 @@ Partial Class showClinic
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(showClinic))
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -30,9 +31,13 @@ Partial Class showClinic
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(showClinic))
         Me.panel1 = New System.Windows.Forms.Panel()
+        Me.btnRestaurar = New System.Windows.Forms.PictureBox()
+        Me.btnMinimizar = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.panel3 = New System.Windows.Forms.Panel()
+        Me.medicationDT = New System.Windows.Forms.DataGridView()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.dtReciepient = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.mrnpTB = New System.Windows.Forms.TextBox()
@@ -70,13 +75,12 @@ Partial Class showClinic
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.patientnameTB = New System.Windows.Forms.Label()
-        Me.medicationDT = New System.Windows.Forms.DataGridView()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnRestaurar = New System.Windows.Forms.PictureBox()
-        Me.btnMinimizar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.panel1.SuspendLayout()
+        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel3.SuspendLayout()
+        CType(Me.medicationDT, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtReciepient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel11.SuspendLayout()
@@ -90,10 +94,6 @@ Partial Class showClinic
         Me.TableLayoutPanel8.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.medicationDT, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel1
@@ -109,6 +109,42 @@ Partial Class showClinic
         Me.panel1.Size = New System.Drawing.Size(1322, 49)
         Me.panel1.TabIndex = 17
         '
+        'btnRestaurar
+        '
+        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaurar.Image = CType(resources.GetObject("btnRestaurar.Image"), System.Drawing.Image)
+        Me.btnRestaurar.Location = New System.Drawing.Point(1252, 13)
+        Me.btnRestaurar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRestaurar.Name = "btnRestaurar"
+        Me.btnRestaurar.Size = New System.Drawing.Size(25, 27)
+        Me.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnRestaurar.TabIndex = 19
+        Me.btnRestaurar.TabStop = False
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1218, 13)
+        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(26, 28)
+        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnMinimizar.TabIndex = 18
+        Me.btnMinimizar.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(1285, 13)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(28, 27)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 17
+        Me.PictureBox6.TabStop = False
+        '
         'panel3
         '
         Me.panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(88, Byte), Integer))
@@ -123,20 +159,20 @@ Partial Class showClinic
         Me.panel3.Size = New System.Drawing.Size(1322, 747)
         Me.panel3.TabIndex = 18
         '
-        'dtReciepient
+        'medicationDT
         '
-        Me.dtReciepient.AllowUserToAddRows = False
-        Me.dtReciepient.AllowUserToDeleteRows = False
+        Me.medicationDT.AllowUserToAddRows = False
+        Me.medicationDT.AllowUserToDeleteRows = False
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.CadetBlue
         DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.2!, System.Drawing.FontStyle.Bold)
         DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        Me.dtReciepient.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
-        Me.dtReciepient.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.medicationDT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+        Me.medicationDT.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtReciepient.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.medicationDT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(88, Byte), Integer))
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
@@ -144,8 +180,8 @@ Partial Class showClinic
         DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.GradientInactiveCaption
         DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtReciepient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
-        Me.dtReciepient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.medicationDT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        Me.medicationDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle11.BackColor = System.Drawing.Color.CadetBlue
         DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
@@ -153,11 +189,11 @@ Partial Class showClinic
         DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dtReciepient.DefaultCellStyle = DataGridViewCellStyle11
-        Me.dtReciepient.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.dtReciepient.Location = New System.Drawing.Point(13, 200)
-        Me.dtReciepient.Name = "dtReciepient"
-        Me.dtReciepient.ReadOnly = True
+        Me.medicationDT.DefaultCellStyle = DataGridViewCellStyle11
+        Me.medicationDT.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.medicationDT.Location = New System.Drawing.Point(14, 481)
+        Me.medicationDT.Name = "medicationDT"
+        Me.medicationDT.ReadOnly = True
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle12.BackColor = System.Drawing.Color.CadetBlue
         DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
@@ -165,7 +201,66 @@ Partial Class showClinic
         DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtReciepient.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.medicationDT.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.medicationDT.RowHeadersWidth = 51
+        Me.medicationDT.RowTemplate.Height = 24
+        Me.medicationDT.Size = New System.Drawing.Size(1297, 244)
+        Me.medicationDT.TabIndex = 31
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label6.Location = New System.Drawing.Point(23, 447)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(100, 23)
+        Me.Label6.TabIndex = 36
+        Me.Label6.Text = "medication "
+        '
+        'dtReciepient
+        '
+        Me.dtReciepient.AllowUserToAddRows = False
+        Me.dtReciepient.AllowUserToDeleteRows = False
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI Semibold", 11.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
+        Me.dtReciepient.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        Me.dtReciepient.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtReciepient.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(88, Byte), Integer))
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtReciepient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.dtReciepient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dtReciepient.DefaultCellStyle = DataGridViewCellStyle15
+        Me.dtReciepient.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dtReciepient.Location = New System.Drawing.Point(13, 200)
+        Me.dtReciepient.Name = "dtReciepient"
+        Me.dtReciepient.ReadOnly = True
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtReciepient.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.dtReciepient.RowHeadersWidth = 51
         Me.dtReciepient.RowTemplate.Height = 24
         Me.dtReciepient.Size = New System.Drawing.Size(1297, 244)
@@ -618,101 +713,6 @@ Partial Class showClinic
         Me.patientnameTB.TabIndex = 3
         Me.patientnameTB.Text = "."
         '
-        'medicationDT
-        '
-        Me.medicationDT.AllowUserToAddRows = False
-        Me.medicationDT.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI Semibold", 11.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
-        Me.medicationDT.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
-        Me.medicationDT.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.medicationDT.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(88, Byte), Integer))
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.medicationDT.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
-        Me.medicationDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.medicationDT.DefaultCellStyle = DataGridViewCellStyle15
-        Me.medicationDT.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.medicationDT.Location = New System.Drawing.Point(14, 481)
-        Me.medicationDT.Name = "medicationDT"
-        Me.medicationDT.ReadOnly = True
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.medicationDT.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
-        Me.medicationDT.RowHeadersWidth = 51
-        Me.medicationDT.RowTemplate.Height = 24
-        Me.medicationDT.Size = New System.Drawing.Size(1297, 244)
-        Me.medicationDT.TabIndex = 31
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(23, 447)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 23)
-        Me.Label6.TabIndex = 36
-        Me.Label6.Text = "medication "
-        '
-        'btnRestaurar
-        '
-        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRestaurar.Image = CType(resources.GetObject("btnRestaurar.Image"), System.Drawing.Image)
-        Me.btnRestaurar.Location = New System.Drawing.Point(1252, 13)
-        Me.btnRestaurar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnRestaurar.Name = "btnRestaurar"
-        Me.btnRestaurar.Size = New System.Drawing.Size(25, 27)
-        Me.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnRestaurar.TabIndex = 19
-        Me.btnRestaurar.TabStop = False
-        '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
-        Me.btnMinimizar.Location = New System.Drawing.Point(1218, 13)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(26, 28)
-        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnMinimizar.TabIndex = 18
-        Me.btnMinimizar.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(1285, 13)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(28, 27)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 17
-        Me.PictureBox6.TabStop = False
-        '
         'showClinic
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -725,8 +725,12 @@ Partial Class showClinic
         Me.Text = "showClinic"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.panel1.ResumeLayout(False)
+        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel3.ResumeLayout(False)
         Me.panel3.PerformLayout()
+        CType(Me.medicationDT, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtReciepient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -752,10 +756,6 @@ Partial Class showClinic
         Me.TableLayoutPanel4.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        CType(Me.medicationDT, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

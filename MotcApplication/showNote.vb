@@ -46,4 +46,10 @@ Public Class showNote
         textsearch = TextBox1.Text
         FillDGV()
     End Sub
+
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
 End Class

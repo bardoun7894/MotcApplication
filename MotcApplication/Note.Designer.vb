@@ -22,14 +22,15 @@ Partial Class Note
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panel3 = New System.Windows.Forms.Panel()
+        Me.dateDT = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.addnoteTb = New System.Windows.Forms.TextBox()
         Me.saveReciepientBtn = New System.Windows.Forms.Button()
         Me.fullnameTB = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.MRNTb = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.MRNlbl = New System.Windows.Forms.Label()
@@ -41,8 +42,6 @@ Partial Class Note
         Me.ConsultantNameTB = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.fullnameLabel = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dateDT = New System.Windows.Forms.DateTimePicker()
         Me.panel1.SuspendLayout()
         Me.panel3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -96,6 +95,13 @@ Partial Class Note
         Me.panel3.Size = New System.Drawing.Size(1526, 810)
         Me.panel3.TabIndex = 16
         '
+        'dateDT
+        '
+        Me.dateDT.Location = New System.Drawing.Point(404, 188)
+        Me.dateDT.Name = "dateDT"
+        Me.dateDT.Size = New System.Drawing.Size(248, 22)
+        Me.dateDT.TabIndex = 6
+        '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.addnoteTb)
@@ -135,6 +141,17 @@ Partial Class Note
         Me.fullnameTB.Name = "fullnameTB"
         Me.fullnameTB.Size = New System.Drawing.Size(222, 22)
         Me.fullnameTB.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(239, 188)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 23)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "DATE"
         '
         'MRNTb
         '
@@ -236,24 +253,6 @@ Partial Class Note
         Me.fullnameLabel.Size = New System.Drawing.Size(148, 23)
         Me.fullnameLabel.TabIndex = 0
         Me.fullnameLabel.Text = "Consultant Name"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(239, 188)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 23)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "DATE"
-        '
-        'dateDT
-        '
-        Me.dateDT.Location = New System.Drawing.Point(404, 188)
-        Me.dateDT.Name = "dateDT"
-        Me.dateDT.Size = New System.Drawing.Size(222, 22)
-        Me.dateDT.TabIndex = 6
         '
         'Note
         '

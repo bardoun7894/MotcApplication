@@ -98,4 +98,12 @@ Public Class showClinic
         txtsearch = mrnpTB.Text
         fillDgv()
     End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 End Class
